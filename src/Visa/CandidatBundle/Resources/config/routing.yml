@@ -1,0 +1,33 @@
+candidat_homepage:
+    path:     /
+    defaults: { _controller: CandidatBundle:Candidat:index }
+    
+    
+add_candidant:
+    path:     /Candidat/ajout
+    defaults: { _controller: CandidatBundle:Candidat:add }    
+    
+list_candidant:
+    path:     /Candidat/affiche
+    defaults: { _controller: CandidatBundle:Candidat:list }   
+    
+traitement_candidat:
+    path:     /Candidat/traiter
+    defaults: { _controller: CandidatBundle:Candidat:traiter }   
+    
+refuser_candidat:
+    path:     /Candidat/refuser/{cin}
+    defaults: { _controller: CandidatBundle:Candidat:refuser } 
+    
+accepter_candidat:
+    path:     /Candidat/accepter/{cin}
+    defaults: { _controller: CandidatBundle:Candidat:accepter }    
+    
+test_wlcPage:
+    path:     /wlc/{id}
+    defaults: { _controller: CandidatBundle:Default:wlc } 
+    
+test_cal:
+    path:     /cal/{w}/{h}
+    defaults: { _controller: CandidatBundle:Default:calcule }    
+    

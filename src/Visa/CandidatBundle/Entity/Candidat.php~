@@ -1,0 +1,189 @@
+<?php
+
+namespace Visa\CandidatBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Candidat
+ *
+ * @ORM\Table(name="candidat")
+ * @ORM\Entity(repositoryClass="Visa\CandidatBundle\Repository\CandidatRepository")
+ */
+class Candidat
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     */
+    private $cin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="situationfamiliale", type="string", length=255)
+     */
+    private $situationfamiliale;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nbjours", type="integer")
+     */
+    private $nbjours;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="etat", type="string", length=255)
+     */
+    private $etat;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Candidat
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return Candidat
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set situationfamiliale
+     *
+     * @param string $situationfamiliale
+     *
+     * @return Candidat
+     */
+    public function setSituationfamiliale($situationfamiliale)
+    {
+        $this->situationfamiliale = $situationfamiliale;
+
+        return $this;
+    }
+
+    /**
+     * Get situationfamiliale
+     *
+     * @return string
+     */
+    public function getSituationfamiliale()
+    {
+        return $this->situationfamiliale;
+    }
+
+    /**
+     * Set nbjours
+     *
+     * @param integer $nbjours
+     *
+     * @return Candidat
+     */
+    public function setNbjours($nbjours)
+    {
+        $this->nbjours = $nbjours;
+
+        return $this;
+    }
+
+    /**
+     * Get nbjours
+     *
+     * @return int
+     */
+    public function getNbjours()
+    {
+        return $this->nbjours;
+    }
+
+    /**
+     * Set etat
+     *
+     * @param string $etat
+     *
+     * @return Candidat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+
+        return $this;
+    }
+
+    /**
+     * Get etat
+     *
+     * @return string
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+}
+

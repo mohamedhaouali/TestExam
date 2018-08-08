@@ -1,0 +1,21 @@
+<h1>liste des candidats</h1>
+{% for c in can %}
+    <fieldset style="width: 20%">
+        <legend>Candidat {{ c.cin }}</legend>
+        <table>
+            <tr>
+                <td><b>Nom  </b> </td>
+                <td>{{ c.nom }}</td>
+            </tr>
+            <tr>
+                <td><b>Email  </b> </td>
+                <td>{{ c.email }}</td>
+            </tr>
+            <tr>
+                <td><b>Etat  </b> </td>
+                <td >{{ c.etat }}</td>
+            </tr>
+        </table>
+
+    </fieldset>
+{% endfor %}
